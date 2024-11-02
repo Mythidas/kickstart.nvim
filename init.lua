@@ -102,7 +102,7 @@ vim.g.have_nerd_font = false
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -120,6 +120,9 @@ end)
 
 -- Enable break indent
 vim.opt.breakindent = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
 
 -- Save undo history
 vim.opt.undofile = true
@@ -639,6 +642,7 @@ require('lazy').setup({
         tailwindcss = {},
         ts_ls = {},
         golangci_lint_ls = {},
+        glsl_analyzer = {},
       }
 
       -- Ensure the servers and tools above are installed
@@ -895,7 +899,7 @@ require('lazy').setup({
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'typescript', 'javascript' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
